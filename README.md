@@ -20,19 +20,6 @@ Finally, docker copies everything in src/ inside this repository to the /var/www
 * ```bash
   docker-compose up --build -d
 ```
-## Environment Variables
-
-To run this project, add 
-MYSQL_ROOT_PASSWORD
-MYSQL_DATABASE
-MYSQL_USER
-MYSQL_PASSWORD
-
-`API_KEY`
-
-`ANOTHER_API_KEY`
-
-
 ## How it Works
 Docker builds an image containing the docker-compose.yml and all of its dependencies by using the Dockerfile contained in this repository.
 
@@ -43,6 +30,15 @@ The Mysql image then uses the [MySql](https://hub.docker.com/_/mysql) Docker ima
 At this point, an image has been built which contains Apache, PHP, Mysql, PDO Extensions and all of the OS dependencies and libraries required to serve a web application written in PHP.
 
 Finally, docker copies everything in src/ inside this repository to the /var/www/html folder inside the image. This is the Apache web root directory.
+## Environment Variables
+
+To run this project, add 
+MYSQL_ROOT_PASSWORD
+MYSQL_DATABASE
+MYSQL_USER
+MYSQL_PASSWORD
+
+
 ## Web Application Usage
 * Run Php application
  ```bash
