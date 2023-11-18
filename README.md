@@ -33,10 +33,10 @@ Finally, docker copies everything in src/ inside this repository to the /var/www
 ## Environment Variables
 
 To run this project, add 
-MYSQL_ROOT_PASSWORD
-MYSQL_DATABASE
-MYSQL_USER
-MYSQL_PASSWORD
+* MYSQL_ROOT_PASSWORD
+* MYSQL_DATABASE
+* MYSQL_USER
+* MYSQL_PASSWORD
 
 
 ## Web Application Usage
