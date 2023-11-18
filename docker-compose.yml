@@ -1,0 +1,27 @@
+version: '3'
+services:
+  mysql : 
+        image: mysql
+        container_name : php_project_mysql
+        command : --default-authentication-plugin=mysql_native_password
+        volumes : 
+          - .:/application
+        restart : always 
+        environment : 
+          - MYSQL_ROOT_PASSWORD=hs4g55ShFwX6zFo
+          - MYSQL_DATABASE=amos
+          - MYSQL_USER=stuart
+          - MYSQL_PASSWORD=E0uR2WiKUgVGhFO
+        ports : 
+          - 3306:3306
+  website : 
+      image : php:7.4-apache
+      container_name : php_project_php
+      build : 
+        context : ./
+      volumes : 
+        - C:\Users\Smart ComputerS\Desktop\Web\dockerize-php-mysql-application-apache-ubuntu\src:/var/www/html
+      ports :  
+        - 8080:80
+      depends_on : 
+        - mysql
