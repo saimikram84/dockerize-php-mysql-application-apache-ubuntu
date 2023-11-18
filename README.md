@@ -20,7 +20,7 @@ Finally, docker copies everything in src/ inside this repository to the /var/www
 * ```bash
   docker-compose up --build -d
 ```
-## How it Works
+## **How it Works**
 Docker builds an image containing the docker-compose.yml and all of its dependencies by using the Dockerfile contained in this repository.
 
 The Dockerfile tells docker to use the [official PHP Docker image](https://hub.docker.com/_/php/) as the parent image.
